@@ -7,6 +7,8 @@ function hg_prompt {
     hg prompt " {$fg[green]{branch}$reset_color}{($fg_bold[blue]{bookmark}$reset_color)}{ $fg[red]{status}$reset_color}" 2> /dev/null
 }
 
+# add $(hg_prompt) to PROMPT to use
+
 function prompt_char {
 	if [ $UID -eq 0 ]; then echo "%{$fg[red]%}#%{$reset_color%}"; else echo »; fi
 }
